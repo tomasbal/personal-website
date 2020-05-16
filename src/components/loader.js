@@ -53,13 +53,13 @@ const Loader = ({ finishLoading }) => {
       })
       .add({
         targets: '#logo #B',
-        duration: 50,
+        duration: 30,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
       .add({
         targets: '#logo',
-        delay: 200,
+        delay: 300,
         duration: 300,
         easing: 'easeInOutQuart',
         opacity: 0,
