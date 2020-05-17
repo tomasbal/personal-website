@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: 'https://tomislavbalabanov.me',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-32927754-2',
-  googleVerification: '',
+  googleVerification: 'jsX5pad6Yx23jma_DdyfAzJSDwINvVgMYua0VqVsZSc',
   name: 'Tomislav Balabanov',
   location: 'North Macedonia, Skopje',
   email: 'tomislav@tomislavbalabanov.me',
