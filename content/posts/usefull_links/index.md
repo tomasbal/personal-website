@@ -1,7 +1,7 @@
 ---
 title: Usefull links
 description: usefull links for learning web dev and marketing tools
-date: '18.05.2020'
+date: '2020-18-05'
 draft: false
 slug: '/blog/usefull-links'
 tags:
