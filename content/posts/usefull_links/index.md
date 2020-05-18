@@ -37,7 +37,7 @@ tags:
 ## About DNS:
 [How DNS work](https://www.cloudflare.com/learning/dns/what-is-dns/ 'How DNS work') 
 
-## If you have any questions feel free to ask us directly on the following emails:
+# If you have any questions feel free to ask us directly on the following emails:
 [Tomislav: tomislav@tomislavbalabanov.me](mailto:tomislavbalabanov.me 'Send mail to Tomislav')  
 [Emir: e@emiralkafadji.com](mailto:e@emiralkafadji.com 'Send mail to Emir')
 
