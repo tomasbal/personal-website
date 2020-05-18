@@ -117,7 +117,7 @@ const StyledTags = styled.ul`
   }
 `;
 
-const PensievePage = ({ location, data }) => {
+const blogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
@@ -183,12 +183,12 @@ const PensievePage = ({ location, data }) => {
   );
 };
 
-PensievePage.propTypes = {
+blogPage.propTypes = {
   location: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
 };
 
-export default PensievePage;
+export default blogPage;
 
 export const pageQuery = graphql`
   {
