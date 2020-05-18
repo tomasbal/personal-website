@@ -3,7 +3,7 @@ title: Useful links
 description: useful links for learning web dev and marketing tools
 date: '2020-05-18'
 draft: false
-slug: '/blog/usefull-links'
+slug: '/blog/useful-links'
 tags:
   - WordPress
 ---
