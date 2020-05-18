@@ -21,7 +21,6 @@ tags:
 [Facebook Business link 1](https://www.facebook.com/business/help/952192354843755?id=1205376682832142 'Facebook Business link1')
 [Facebook Business link 2](https://www.facebook.com/business/help/113163272211510?id=180505742745347 'Facebook Business link2')
 
-
 ## About domain:
 [How domains work](https://www.wpbeginner.com/beginners-guide/beginners-guide-what-is-a-domain-name-and-how-do-domains-work/ 'How domains work')
 
