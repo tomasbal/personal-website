@@ -3,7 +3,7 @@ date: '2019-01-09'
 title: 'WordPress Developer'
 company: 'Savory & Partners'
 location: 'Dubai, UAE'
-range: 'July 2018 - Dec 2020'
+range: 'July 2018 - Present'
 url: 'https://savoryandpartners.com'
 ---
 
