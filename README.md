@@ -5,7 +5,7 @@
   tomislavbalabanov.me
 </h1>
 <p align="center">
-  My final website <a href="https://tomislavbalabanov.me" target="_blank">tomislavbalabanov.me</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, React.js and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  My final website <a href="https://tomislavbalabanov.me" target="_blank">tomislavbalabanov.me</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, <a href="https://reactjs.org/">React.js</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
   <a href="https://app.netlify.com/sites/fervent-shaw-3a8c7c/deploys" target="_blank">
