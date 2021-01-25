@@ -6,8 +6,10 @@ skills:
   - HTML & (S)CSS
   - React
   - Node.js
+  - Next.js
+  - Gatsby.js
+  - MongoDB
   - WordPress
-  - Gatsby
   - WooCommerce
   - PHP
 ---
