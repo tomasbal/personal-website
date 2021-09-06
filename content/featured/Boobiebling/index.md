@@ -1,6 +1,6 @@
 ---
 date: '4'
-title: 'Boobiebling - Custom Shopify Theme'
+title: 'Boobiebling - Shopify Theme'
 cover: './boobiebling.png'
 github: ''
 external: 'https://theboobiebling.com/'
