@@ -1,6 +1,6 @@
 ---
 date: '2019-01-09'
-title: 'WordPress Developer'
+title: 'Software Engineer'
 company: 'Savory & Partners'
 location: 'Dubai, UAE'
 range: 'July 2018 - Present'
