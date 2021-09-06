@@ -1,0 +1,16 @@
+---
+date: '4'
+title: 'Boobiebling - Custom Shopify Theme'
+cover: './boobie.png'
+github: ''
+external: 'https://theboobiebling.com/'
+tech:
+  - Shopify
+  - JavaScript
+  - jQuery
+  - Gulp.js
+  - ACF Shopify
+showInProjects: true
+---
+
+Fully custom Shopify theme developed based on their needs.
