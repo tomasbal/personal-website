@@ -8,7 +8,7 @@ tech:
   - PHP
   - jQuery & JS
   - WordPress
-  - HubSpot & GA API's
+  - HubSpot, Salesforce & GA API's
 showInProjects: true
 ---
 
