@@ -1,0 +1,17 @@
+[build]
+  command = "yarn build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "16.14.0"
+  NPM_VERSION = "8.5.0"
+  YARN_VERSION = "1.22.18"
+
+# Redirects and headers are NGINX-style
+# For info on headers, see: https://www.netlify.com/docs/headers-and-basic-auth/
+
+# Gatsby already handles routing, so we only need a 404 fallback
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

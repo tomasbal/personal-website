@@ -10,4 +10,4 @@ company: 'Devlent'
 showInProjects: true
 ---
 
-Designed and Developed custom website for their needs.
+Tomislav Balabanov

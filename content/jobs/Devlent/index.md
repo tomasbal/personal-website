@@ -1,11 +1,12 @@
 ---
 date: '2018-01-01'
-title: 'Founder & Web Developer'
+title: 'Founder & Solutions Architect'
 company: 'Devlent'
-location: 'Northeastern University'
-range: 'Jan - Present'
+location: 'Skopje, North Macedonia'
+range: 'Jan 2018 - Present'
 url: 'https://devlent.com/'
 ---
 
-- Devlent is web agency oriented to build custom web solutions with UX first in mind.
-- We work on custom CMS, API's, web scrapers, WordPress and react sites.
+- Devlent is a technology studio specializing in cloud architecture, solutions design, and custom software development.
+- Architect and deliver scalable AWS and Azure-based solutions with a focus on security, performance, and cost optimization.
+- Design and implement robust APIs, cloud infrastructure, and serverless architectures for clients across multiple industries.

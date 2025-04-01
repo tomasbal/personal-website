@@ -1,7 +1,9 @@
 module.exports = {
-  siteTitle: 'Tomislav Balabanov | Web Developer | Software Engineer',
-  siteDescription: 'Tomislav is software engineer based in North Macedonia, specialized in building (and occasionally designing) exceptional websites, applications, and everything in between.',
-  siteKeywords: 'Tomislav Balabanov, Tomislav, Balabanov, tomasbal, software engineer, front-end engineer, web developer, javascript, northmacedonia',
+  siteTitle: 'Tomislav Balabanov | Solutions Architect | Cloud Engineer',
+  siteDescription:
+    'Tomislav is an experienced Solutions Architect and Software Engineer based in North Macedonia, specialized in designing and implementing high-impact cloud solutions on AWS and Azure.',
+  siteKeywords:
+    'Tomislav Balabanov, Solutions Architect, AWS, Azure, Cloud Architecture, Security Architect, Software Engineer, North Macedonia',
   siteUrl: 'https://tomislavbalabanov.me',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-32927754-2',
@@ -11,7 +13,8 @@ module.exports = {
   email: 'tomislav@tomislavbalabanov.me',
   github: 'https://github.com/tomasbal',
   twitterHandle: '@tomasbal',
-  socialMedia: [{
+  socialMedia: [
+    {
       name: 'GitHub',
       url: 'https://github.com/tomasbal',
     },
@@ -22,20 +25,21 @@ module.exports = {
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/tomasbal',
-    }
+    },
   ],
 
-  navLinks: [{
+  navLinks: [
+    {
       name: 'About',
       url: '/#about',
     },
     {
-      name: 'Experience',
-      url: '/#jobs',
+      name: 'Skills',
+      url: '/#competence',
     },
     {
-      name: 'Work',
-      url: '/#projects',
+      name: 'Certifications',
+      url: '/#certificates',
     },
     {
       name: 'Contact',
@@ -43,7 +47,7 @@ module.exports = {
     },
     {
       name: 'Blog',
-      url: '/blog'
+      url: '/blog',
     },
   ],
 
@@ -63,7 +67,7 @@ module.exports = {
     rotate: {
       x: 0,
       y: 0,
-      z: 0
+      z: 0,
     },
     opacity: 0,
     scale: 1,
@@ -76,7 +80,7 @@ module.exports = {
       top: 0,
       right: 0,
       bottom: 0,
-      left: 0
+      left: 0,
     },
   }),
 };

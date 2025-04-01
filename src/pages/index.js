@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
+import { Layout, Hero, About, Competence, Certificates, Contact } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -14,9 +14,8 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
-      <Jobs data={data.jobs.edges} />
-      <Featured data={data.featured.edges} />
-      <Projects data={data.projects.edges} />
+      <Competence data={data.competence.edges} />
+      <Certificates data={data.certificates.edges} />
       <Contact data={data.contact.edges} />
     </StyledMainContainer>
   </Layout>
@@ -102,20 +101,26 @@ export const pageQuery = graphql`
         }
       }
     }
-    projects: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "/projects/" }
-        frontmatter: { showInProjects: { ne: false } }
-      }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    competence: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/competence/" } }) {
       edges {
         node {
           frontmatter {
             title
-            tech
-            github
-            external
+          }
+          html
+        }
+      }
+    }
+    certificates: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/certificates/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            certificates {
+              name
+              issuer
+              date
+            }
           }
           html
         }

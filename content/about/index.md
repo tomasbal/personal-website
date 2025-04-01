@@ -2,21 +2,22 @@
 title: 'About Me'
 avatar: './me.jpg'
 skills:
-  - JavaScript (ES6+)
-  - HTML & (S)CSS
-  - Shopify Development
-  - React
-  - Node.js
-  - Next.js
-  - Gatsby.js
-  - MongoDB
-  - WordPress
-  - WooCommerce
-  - PHP
+  - AWS & Azure Cloud
+  - System Architecture
+  - Cloud Infrastructure
+  - Microservices
+  - Kubernetes & Docker
+  - Serverless Computing
+  - Infrastructure as Code
+  - API Design & Integration
+  - Security Architecture
+  - DevOps & CI/CD
+  - Performance Optimization
+  - Disaster Recovery
 ---
 
-Hello! I'm Tomislav, a software engineer based in North Macedonia.
+Hello! I'm Tomislav, a Solutions Architect with a passion for elegant system design and cloud technologies.
 
-I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
+I find joy in the craft of architecture - taking complex problems and creating clear, resilient systems. Throughout my career, I've had the opportunity to work on fascinating technical challenges across various domains. What excites me most is designing solutions that are not only technically sound but also adaptable and forward-thinking. I'm particularly interested in cloud-native approaches that balance performance, security, and sustainability.
 
-Here are a few technologies I've been working with recently:
+Some technologies I enjoy working with include:

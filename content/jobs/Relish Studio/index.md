@@ -1,10 +1,13 @@
 ---
 date: '2019-01-01'
-title: 'Software Engineer'
+title: 'Senior Solution Architect'
 company: 'Relish Studio'
-location: 'Skopje, Macedonia'
+location: 'Skopje, North Macedonia'
 range: 'July 2019 - Present'
 url: 'https://relish.studio/'
 ---
 
-- We are a team of visual and verbal designers, growth-marketers, and technologists turning new products into compelling brand experiences.
+- Lead the architectural design and implementation of cloud-native applications using microservices architecture on AWS.
+- Designed scalable, high-performance solutions that integrate with marketing and analytics platforms to deliver superior data insights.
+- Architected secure, resilient systems that handle mission-critical business operations while ensuring data integrity and compliance.
+- Mentored development teams on cloud best practices, infrastructure as code, and modern development methodologies.

@@ -1,6 +1,6 @@
 ---
-title: 'Get In Touch'
+title: "Let's Connect"
 buttonText: 'Say Hello'
 ---
 
-I'm currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+I'm always interested in hearing about cool tech projects, sharing ideas, or just having a good conversation about cloud architecture and solutions design. Whether you have questions about a technical challenge or just want to say hi, feel free to reach out!
