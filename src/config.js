@@ -1,9 +1,10 @@
 module.exports = {
-  siteTitle: 'Tomislav Balabanov | Solutions Architect | Cloud Engineer',
+  siteTitle:
+    'Tomislav Balabanov | Solutions Architect | Software Engineer | System Architect | Cloud Architect',
   siteDescription:
     'Tomislav is an experienced Solutions Architect and Software Engineer based in North Macedonia, specialized in designing and implementing high-impact cloud solutions on AWS and Azure.',
   siteKeywords:
-    'Tomislav Balabanov, Solutions Architect, AWS, Azure, Cloud Architecture, Security Architect, Software Engineer, North Macedonia',
+    'Tomislav Balabanov, Solutions Architect, AWS, Azure, Cloud Architecture, System Architect, Security Architect, Software Engineer, North Macedonia',
   siteUrl: 'https://tomislavbalabanov.me',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-32927754-2',

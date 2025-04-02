@@ -281,7 +281,8 @@ class Nav extends Component {
                     <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
                       <StyledListItem
                         key={i}
-                        style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                        style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}
+                      >
                         <StyledListLink to={url}>{name}</StyledListLink>
                       </StyledListItem>
                     </CSSTransition>
@@ -294,10 +295,11 @@ class Nav extends Component {
                 <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                   <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
                     <StyledResumeButton
-                      href="/resume.pdf"
+                      href="/https://www.linkedin.com/in/tomislavbalabanov/"
                       target="_blank"
-                      rel="nofollow noopener noreferrer">
-                      Resume
+                      rel="nofollow noopener noreferrer"
+                    >
+                      More
                     </StyledResumeButton>
                   </div>
                 </CSSTransition>

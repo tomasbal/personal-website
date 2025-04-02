@@ -22,29 +22,72 @@ const StyledContent = styled.div`
 
 const StyledCertGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
   position: relative;
   margin-top: 30px;
 `;
 
+const StyledCertLink = styled.a`
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+`;
+
 const StyledCertCard = styled.div`
   ${mixins.boxShadow};
   position: relative;
-  padding: 25px;
+  padding: 20px 15px;
   border-radius: ${theme.borderRadius};
   background-color: ${colors.lightNavy};
   transition: ${theme.transition};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
     transform: translateY(-5px);
+    background-color: ${colors.lightestNavy};
+  }
+`;
+
+const StyledIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+const StyledIcon = styled.div`
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: ${theme.transition};
+    border-radius: 8px;
+
+    ${StyledCertCard}:hover & {
+      transform: scale(1.05);
+    }
   }
 `;
 
 const StyledCertName = styled.h5`
   margin: 0 0 8px;
   color: ${colors.lightestSlate};
-  font-size: ${fontSizes.lg};
+  font-size: ${fontSizes.md};
+  text-align: center;
+  line-height: 1.4;
 `;
 
 const StyledCertIssuer = styled.p`
@@ -52,6 +95,7 @@ const StyledCertIssuer = styled.p`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
   color: ${colors.green};
+  text-align: center;
 `;
 
 const StyledCertDate = styled.p`
@@ -59,6 +103,24 @@ const StyledCertDate = styled.p`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.xs};
   color: ${colors.slate};
+  text-align: center;
+  margin-top: auto;
+`;
+
+const StyledViewDetails = styled.div`
+  color: ${colors.lightSlate};
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.xs};
+  text-align: center;
+  margin-top: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: ${theme.transition};
+
+  ${StyledCertCard}:hover & {
+    visibility: visible;
+    opacity: 1;
+  }
 `;
 
 const Certificates = ({ data }) => {
@@ -76,12 +138,18 @@ const Certificates = ({ data }) => {
       <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
       <StyledCertGrid>
         {certificates &&
-          certificates.map(({ name, issuer, date }, i) => (
-            <StyledCertCard key={i}>
-              <StyledCertName>{name}</StyledCertName>
-              <StyledCertIssuer>{issuer}</StyledCertIssuer>
-              <StyledCertDate>{date}</StyledCertDate>
-            </StyledCertCard>
+          certificates.map(({ name, issuer, date, icon, url }, i) => (
+            <StyledCertLink key={i} href={url} target="_blank" rel="noopener noreferrer">
+              <StyledCertCard>
+                <StyledIconContainer>
+                  <StyledIcon>{icon && <img src={icon} alt={`${name} Icon`} />}</StyledIcon>
+                </StyledIconContainer>
+                <StyledCertName>{name}</StyledCertName>
+                <StyledCertIssuer>{issuer}</StyledCertIssuer>
+                <StyledCertDate>{date}</StyledCertDate>
+                <StyledViewDetails>View Details ↗</StyledViewDetails>
+              </StyledCertCard>
+            </StyledCertLink>
           ))}
       </StyledCertGrid>
     </StyledContainer>

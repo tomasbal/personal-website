@@ -120,6 +120,8 @@ export const pageQuery = graphql`
               name
               issuer
               date
+              icon
+              url
             }
           }
           html
