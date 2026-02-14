@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
@@ -50,7 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
+        plugins: [
+          {
             // https://www.gatsbyjs.org/packages/gatsby-remark-external-links
             resolve: 'gatsby-remark-external-links',
             options: {
@@ -65,9 +67,6 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: {
-                color: config.colors.green
-              },
             },
           },
           {
@@ -113,18 +112,20 @@ module.exports = {
               // existing language definition. More details on this option can be
               // found under the header "Add new language definition or extend an
               // existing language" below.
-              languageExtensions: [{
-                language: 'superscript',
-                extend: 'javascript',
-                definition: {
-                  superscript_types: /(SuperType)/,
-                },
-                insertBefore: {
-                  function: {
-                    superscript_keywords: /(superif|superelse)/,
+              languageExtensions: [
+                {
+                  language: 'superscript',
+                  extend: 'javascript',
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
                   },
                 },
-              }, ],
+              ],
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
@@ -138,9 +139,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: config.googleAnalyticsID,
+        trackingIds: [config.googleAnalyticsID],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
   ],

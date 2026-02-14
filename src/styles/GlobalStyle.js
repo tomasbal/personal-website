@@ -98,11 +98,6 @@ const GlobalStyle = createGlobalStyle`
     vertical-align: middle;
   }
 
-  img[alt=""],
-  img:not([alt]) {
-    filter: blur(5px);
-  }
-
   svg {
     width: 100%;
     height: 100%;
@@ -267,6 +262,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .gatsby-image-wrapper,
   .gatsby-image-outer-wrapper {
     height: 100%;
   }
