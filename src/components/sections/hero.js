@@ -130,7 +130,7 @@ const Hero = ({ data }) => {
         <StyledDossierLink href="/#about">&gt; VIEW DOSSIER</StyledDossierLink>
       </StyledButtons>
       <StyledStatus>
-        <StatusIndicator label="STATUS: AVAILABLE FOR PROJECTS" />
+        <StatusIndicator label="STATUS: SYSTEMS OPERATIONAL" />
       </StyledStatus>
     </div>
   );
