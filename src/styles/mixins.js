@@ -86,6 +86,7 @@ const mixins = {
     &:focus,
     &:active {
       background-color: ${colors.transGreen};
+      box-shadow: 0 0 10px rgba(0, 255, 200, 0.15);
     }
     &:after {
       display: none !important;
@@ -108,10 +109,33 @@ const mixins = {
     &:focus,
     &:active {
       background-color: ${colors.transGreen};
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.2);
     }
     &:after {
       display: none !important;
     }
+  `,
+
+  glassmorphism: css`
+    background: rgba(22, 27, 34, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 200, 0.08);
+  `,
+
+  glowBorder: css`
+    border: 1px solid rgba(0, 255, 200, 0.1);
+    transition: ${theme.transition};
+    &:hover {
+      border-color: rgba(0, 255, 200, 0.3);
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.1);
+    }
+  `,
+
+  neonGlow: css`
+    text-shadow:
+      0 0 10px rgba(0, 255, 200, 0.3),
+      0 0 20px rgba(0, 255, 200, 0.1);
   `,
 
   sidePadding: css`
@@ -141,10 +165,11 @@ const mixins = {
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: '▹';
+        content: '>';
         position: absolute;
         left: 0;
         color: ${colors.green};
+        font-family: ${fonts.SFMono};
       }
     }
   `,

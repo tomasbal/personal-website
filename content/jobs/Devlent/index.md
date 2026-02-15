@@ -7,6 +7,6 @@ range: 'Jan 2018 - Present'
 url: 'https://devlent.com/'
 ---
 
-- Devlent is a technology studio specializing in cloud architecture, solutions design, and custom software development.
-- Architect and deliver scalable AWS and Azure-based solutions with a focus on security, performance, and cost optimization.
-- Design and implement robust APIs, cloud infrastructure, and serverless architectures for clients across multiple industries.
+- Founded and lead a technology studio delivering cloud architecture, solutions design, and custom software engineering for clients across multiple industries.
+- Architect end-to-end AWS and Azure solutions with emphasis on fault-tolerant distributed systems, cost-optimized infrastructure, and zero-downtime deployments.
+- Design and implement event-driven serverless architectures and RESTful API platforms that process millions of requests with sub-100ms latency targets.

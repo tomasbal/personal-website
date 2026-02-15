@@ -3,25 +3,19 @@ import theme from './theme';
 const { colors, fontSizes, fonts } = theme;
 
 const prismColors = {
-  bg: `#112340`,
-  lineHighlight: `#1d2d50`,
-  blue: `#5ccfe6`,
-  purple: `#c3a6ff`,
-  green: `#bae67e`,
-  yellow: `#ffd580`,
-  orange: `#ffae57`,
-  red: `#ef6b73`,
-  grey: `#a2aabc`,
-  comment: `#8695b799`,
+  bg: `#0d1117`,
+  lineHighlight: `#161b22`,
+  blue: `#79c0ff`,
+  purple: `#d2a8ff`,
+  green: `#7ee787`,
+  yellow: `#e3b341`,
+  orange: `#ffa657`,
+  red: `#ff7b72`,
+  grey: `#8b949e`,
+  comment: `#8b949e99`,
 };
 
-// https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-
 const PrismStyles = css`
-  /**
-  * Add back the container background-color, border-radius, padding, margin
-  * and overflow that we removed from <pre>.
-  */
   .gatsby-highlight {
     background-color: ${prismColors.bg};
     color: ${prismColors.variable};
@@ -32,6 +26,7 @@ const PrismStyles = css`
     position: relative;
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.md};
+    border: 1px solid rgba(0, 255, 200, 0.08);
   }
 
   .gatsby-highlight code[class*='language-'],
@@ -47,24 +42,16 @@ const PrismStyles = css`
     hyphens: none;
   }
 
-  /**
-  * Remove the default PrismJS theme background-color, border-radius, margin,
-  * padding and overflow.
-  * 1. Make the element just wide enough to fit its content.
-  * 2. Always fill the visible space in .gatsby-highlight.
-  * 3. Adjust the position of the line numbers
-  */
   .gatsby-highlight pre[class*='language-'] {
     background-color: transparent;
     margin: 0;
     padding: 0;
     overflow: initial;
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
+    float: left;
+    min-width: 100%;
     padding-top: 2em;
   }
 
-  /* File names */
   .gatsby-code-title {
     padding: 1em 1.5em;
     font-family: ${fonts.SFMono};
@@ -82,7 +69,6 @@ const PrismStyles = css`
     }
   }
 
-  /* Line highlighting */
   .gatsby-highlight-code-line {
     display: block;
     background-color: ${prismColors.lineHighlight};
@@ -93,10 +79,9 @@ const PrismStyles = css`
     margin-left: -1.35em;
   }
 
-  /* Language badges */
   .gatsby-highlight pre[class*='language-']::before {
     background: ${colors.lightestNavy};
-    color: ${colors.white};
+    color: ${colors.green};
     font-size: ${fontSizes.xs};
     font-family: ${fonts.SFMono};
     line-height: 1.5;
@@ -158,7 +143,6 @@ const PrismStyles = css`
     content: 'flow';
   }
 
-  /* Prism Styles */
   .token {
     display: inline;
   }

@@ -31,6 +31,8 @@ const StyledLabel = styled.h4`
   font-family: ${fonts.SFMono};
   margin-top: 10px;
   padding-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 `;
 const StyledProjectName = styled.h5`
   font-size: 28px;
@@ -43,20 +45,29 @@ const StyledProjectName = styled.h5`
   }
 `;
 const StyledDescription = styled.div`
-  ${mixins.boxShadow};
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: ${colors.lightNavy};
+  background: rgba(22, 27, 34, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 200, 0.08);
   color: ${colors.lightSlate};
   font-size: ${fontSizes.lg};
   border-radius: ${theme.borderRadius};
+  transition: ${theme.transition};
+  &:hover {
+    border-color: rgba(0, 255, 200, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.05);
+  }
   ${media.thone`
     background-color: transparent;
     padding: 20px 0;
-    box-shadow: none;
+    border: none;
+    backdrop-filter: none;
     &:hover {
       box-shadow: none;
+      border-color: transparent;
     }
   `};
   p {
@@ -79,11 +90,18 @@ const StyledTechList = styled.ul`
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.smish};
     color: ${colors.slate};
-    margin-right: ${theme.margin};
+    margin-right: 5px;
     margin-bottom: 7px;
     white-space: nowrap;
+    &:after {
+      content: ' //';
+      color: ${colors.green};
+      opacity: 0.4;
+    }
     &:last-of-type {
-      margin-right: 0;
+      &:after {
+        content: '';
+      }
     }
     ${media.thone`
       color: ${colors.lightestSlate};
@@ -106,19 +124,32 @@ const StyledLinkWrapper = styled.div`
     }
   }
 `;
+const StyledStatusTag = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.xs};
+  color: ${colors.green};
+  background: rgba(0, 255, 200, 0.08);
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  padding: 4px 10px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  z-index: 5;
+`;
 const StyledFeaturedImg = styled(GatsbyImage)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+  filter: grayscale(100%) contrast(1) brightness(90%) hue-rotate(120deg);
   ${media.tablet`
     object-fit: cover;
     width: auto;
     height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
+    filter: grayscale(100%) contrast(1) brightness(80%) hue-rotate(120deg);
   `};
 `;
 const StyledImgContainer = styled.a`
@@ -127,9 +158,10 @@ const StyledImgContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${colors.green};
+  background-color: transparent;
   border-radius: ${theme.radius + 1}px;
   transition: ${theme.transition};
+  border: 1px solid rgba(0, 255, 200, 0.08);
   ${media.tablet`height: 100%;`};
   ${media.thone`
     grid-column: 1 / -1;
@@ -137,7 +169,7 @@ const StyledImgContainer = styled.a`
   `};
   &:hover,
   &:focus {
-    background: transparent;
+    border-color: rgba(0, 255, 200, 0.2);
     &:before,
     ${StyledFeaturedImg} {
       background: transparent;
@@ -155,7 +187,7 @@ const StyledImgContainer = styled.a`
     bottom: 0;
     z-index: 3;
     transition: ${theme.transition};
-    background-color: ${colors.navy};
+    background-color: rgba(13, 17, 23, 0.4);
     mix-blend-mode: screen;
   }
 `;
@@ -184,7 +216,7 @@ const StyledProject = styled.div`
     ${StyledTechList} {
       justify-content: flex-end;
       li {
-        margin-left: ${theme.margin};
+        margin-left: 5px;
         margin-right: 0;
       }
     }
@@ -216,7 +248,7 @@ const Featured = ({ data }) => {
 
   return (
     <StyledContainer id="projects">
-      <Heading ref={revealTitle}>Architecting Digital Excellence</Heading>
+      <Heading ref={revealTitle}>Mission Briefings</Heading>
 
       <div>
         {featuredProjects &&
@@ -228,7 +260,7 @@ const Featured = ({ data }) => {
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
-                  <StyledLabel>Featured Project</StyledLabel>
+                  <StyledLabel>OPERATION</StyledLabel>
                   <StyledProjectName>
                     {external ? (
                       <a
@@ -280,6 +312,7 @@ const Featured = ({ data }) => {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
+                  <StyledStatusTag>[DEPLOYED]</StyledStatusTag>
                   {coverImage && <StyledFeaturedImg image={coverImage} alt={title} />}
                 </StyledImgContainer>
               </StyledProject>

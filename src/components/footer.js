@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedIcon } from '@components/icons';
 import { socialMedia } from '@config';
@@ -44,24 +44,8 @@ const StyledGitHubLink = styled.a`
   color: ${colors.lightSlate};
   padding: 10px;
 `;
-const StyledGitHubInfo = styled.div`
-  margin-top: 10px;
-
-  & > span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 7px;
-  }
-  svg {
-    display: inline-block;
-    height: 15px;
-    width: auto;
-    margin-right: 5px;
-  }
-`;
 
 const Footer = () => {
-
   return (
     <StyledContainer>
       <StyledSocial>
@@ -73,7 +57,8 @@ const Footer = () => {
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  aria-label={name}>
+                  aria-label={name}
+                >
                   <FormattedIcon name={name} />
                 </StyledSocialLink>
               </li>
@@ -84,10 +69,9 @@ const Footer = () => {
         <StyledGitHubLink
           href="https://tomislavbalabanov.me/"
           target="_blank"
-          rel="nofollow noopener noreferrer">
-          <div>Designed &amp; Built by Tomislav Balabanov</div>
-
-
+          rel="nofollow noopener noreferrer"
+        >
+          <div>Engineered by Tomislav Balabanov</div>
         </StyledGitHubLink>
       </StyledMetadata>
     </StyledContainer>

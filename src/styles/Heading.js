@@ -15,7 +15,7 @@ const Heading = styled.h3`
 
   &:before {
     counter-increment: section;
-    content: '0' counter(section) '.';
+    content: '[0' counter(section) ']';
     margin-right: 10px;
     font-family: ${fonts.SFMono};
     font-weight: normal;
@@ -31,7 +31,7 @@ const Heading = styled.h3`
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${colors.lightestNavy};
+    background: linear-gradient(90deg, ${colors.green}, transparent);
     position: relative;
     top: -5px;
     margin-left: 20px;

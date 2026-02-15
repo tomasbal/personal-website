@@ -34,7 +34,7 @@ const StyledArchiveLink = styled(Link)`
 `;
 const StyledGrid = styled.div`
   padding-top: 50px;
-  margin:0 auto;
+  margin: 0 auto;
 
   .projects {
     display: grid;
@@ -45,7 +45,6 @@ const StyledGrid = styled.div`
   }
 `;
 const StyledProjectInner = styled.div`
-  ${mixins.boxShadow};
   ${mixins.flexBetween};
   flex-direction: column;
   align-items: flex-start;
@@ -54,7 +53,10 @@ const StyledProjectInner = styled.div`
   height: 100%;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
-  background-color: ${colors.lightNavy};
+  background: rgba(22, 27, 34, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 200, 0.08);
 `;
 const StyledProject = styled.div`
   transition: ${theme.transition};
@@ -64,6 +66,8 @@ const StyledProject = styled.div`
     outline: 0;
     ${StyledProjectInner} {
       transform: translateY(-5px);
+      border-color: rgba(0, 255, 200, 0.25);
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.05);
     }
   }
 `;
@@ -73,10 +77,8 @@ const StyledProjectHeader = styled.div`
 `;
 const StyledFolder = styled.div`
   color: ${colors.green};
-  svg {
-    width: 40px;
-    height: 40px;
-  }
+  font-family: ${fonts.SFMono};
+  font-size: 28px;
 `;
 const StyledProjectLinks = styled.div`
   margin-right: -10px;
@@ -146,9 +148,9 @@ const Projects = ({ data }) => {
 
   return (
     <StyledContainer>
-      <StyledTitle ref={revealTitle}>Other Noteworthy Projects</StyledTitle>
+      <StyledTitle ref={revealTitle}>Repository Index</StyledTitle>
       <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
-        click here to view the archive
+        view full archive
       </StyledArchiveLink>
 
       <StyledGrid>
@@ -162,27 +164,28 @@ const Projects = ({ data }) => {
                   key={i}
                   classNames="fadeup"
                   timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}>
+                  exit={false}
+                >
                   <StyledProject
                     key={i}
                     ref={el => (revealProjects.current[i] = el)}
                     tabIndex="0"
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}>
+                    }}
+                  >
                     <StyledProjectInner>
                       <header>
                         <StyledProjectHeader>
-                          <StyledFolder>
-                            <FormattedIcon name="Folder" />
-                          </StyledFolder>
+                          <StyledFolder>&gt;_</StyledFolder>
                           <StyledProjectLinks>
                             {github && (
                               <StyledIconLink
                                 href={github}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
-                                aria-label="GitHub Link">
+                                aria-label="GitHub Link"
+                              >
                                 <FormattedIcon name="GitHub" />
                               </StyledIconLink>
                             )}
@@ -191,7 +194,8 @@ const Projects = ({ data }) => {
                                 href={external}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
-                                aria-label="External Link">
+                                aria-label="External Link"
+                              >
                                 <FormattedIcon name="External" />
                               </StyledIconLink>
                             )}
@@ -218,7 +222,7 @@ const Projects = ({ data }) => {
       </StyledGrid>
 
       <StyledMoreButton onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
+        {showMore ? '> ls --less' : '> ls --more'}
       </StyledMoreButton>
     </StyledContainer>
   );

@@ -1,13 +1,13 @@
 ---
 date: '2019-01-09'
-title: 'Principal Cloud Solutions Architect'
+title: 'CTO'
 company: 'Savory & Partners'
 location: 'Dubai, UAE'
 range: 'July 2018 - Present'
 url: 'https://savoryandpartners.com'
 ---
 
-- Designed and implemented enterprise-level cloud architecture on AWS to support global operations across multiple regions.
-- Developed secure, compliant data handling systems that process sensitive client information while meeting international regulatory requirements.
-- Architected and deployed custom API integrations with enterprise platforms (HubSpot, Salesforce) that streamlined business operations and increased marketing effectiveness.
-- Implemented robust security protocols and compliance frameworks to protect client data while maintaining high system availability and performance.
+- Designed multi-region enterprise cloud architecture on AWS supporting global operations with cross-region replication, automated disaster recovery, and 99.9% uptime SLA.
+- Engineered GDPR-compliant data processing pipelines handling sensitive client information with encryption, audit logging, and automated data lifecycle management.
+- Architected bidirectional API integrations with HubSpot and Salesforce, building custom middleware that synchronized data across enterprise platforms in near real-time.
+- Implemented IAM governance frameworks, VPC security architectures, and compliance automation achieving adherence to international regulatory standards.

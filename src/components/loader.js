@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
-import { IconLoader } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins } from '@styles';
-const { colors } = theme;
+const { colors, fonts } = theme;
 
 const StyledContainer = styled.div`
   ${mixins.flexCenter};
+  flex-direction: column;
+  align-items: flex-start;
   background-color: ${colors.darkNavy};
   position: fixed;
   width: 100%;
@@ -18,77 +18,73 @@ const StyledContainer = styled.div`
   left: 0;
   right: 0;
   z-index: 99;
+  padding: 0 20%;
 `;
-const StyledLogo = styled.div`
-  width: max-content;
-  max-width: 100px;
-  transition: ${theme.transition};
-  opacity: ${props => (props.isMounted ? 1 : 0)};
-  svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-    fill: none;
-    user-select: none;
-    #B {
-      opacity: 0;
-    }
+
+const StyledLine = styled.div`
+  font-family: ${fonts.SFMono};
+  font-size: 14px;
+  color: ${colors.green};
+  margin-bottom: 8px;
+  opacity: ${props => (props.visible ? 1 : 0)};
+  transition: opacity 0.15s ease;
+
+  .ok {
+    color: ${colors.green};
+  }
+  .label {
+    color: ${colors.slate};
   }
 `;
 
 const Loader = ({ finishLoading }) => {
-  const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
+  const [lines, setLines] = useState([]);
 
-    loader
-      .add({
-        targets: '#logo path',
-        delay: 0,
-        duration: 1500,
-        easing: 'easeInOutQuart',
-        strokeDashoffset: [anime.setDashoffset, 0],
-      })
-      .add({
-        targets: '#logo #B',
-        duration: 30,
-        easing: 'easeInOutQuart',
-        opacity: 1,
-      })
-      .add({
-        targets: '#logo',
-        delay: 300,
-        duration: 300,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        scale: 0.1,
-      })
-      .add({
-        targets: '.loader',
-        duration: 100,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        zIndex: -1,
-      });
-  };
-
-  const [isMounted, setIsMounted] = useState(false);
+  const bootSequence = [
+    { text: '> INITIALIZING SYSTEM...', delay: 200 },
+    { text: '> LOADING MODULES............ ', suffix: '[OK]', delay: 600 },
+    { text: '> ESTABLISHING CONNECTION.... ', suffix: '[OK]', delay: 400 },
+    { text: '> WELCOME, VISITOR.', delay: 300 },
+  ];
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 10);
-    animate();
-    return () => clearTimeout(timeout);
+    // Check for reduced motion preference
+    if (typeof window !== 'undefined') {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        finishLoading();
+        return;
+      }
+    }
+
+    let totalDelay = 100;
+    const timeouts = [];
+
+    bootSequence.forEach((line, i) => {
+      totalDelay += line.delay;
+      const timeout = setTimeout(() => {
+        setLines(prev => [...prev, i]);
+      }, totalDelay);
+      timeouts.push(timeout);
+    });
+
+    const finishTimeout = setTimeout(() => {
+      finishLoading();
+    }, totalDelay + 500);
+    timeouts.push(finishTimeout);
+
+    return () => timeouts.forEach(t => clearTimeout(t));
   }, []);
 
   return (
     <StyledContainer className="loader">
       <Helmet bodyAttributes={{ class: `hidden` }} />
-
-      <StyledLogo isMounted={isMounted}>
-        <IconLoader />
-      </StyledLogo>
+      {bootSequence.map((line, i) => (
+        <StyledLine key={i} visible={lines.includes(i)}>
+          <span className="label">{line.text}</span>
+          {line.suffix && lines.includes(i) && <span className="ok">{line.suffix}</span>}
+        </StyledLine>
+      ))}
     </StyledContainer>
   );
 };

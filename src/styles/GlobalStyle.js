@@ -21,6 +21,36 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes glow-border {
+    0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 200, 0.1); }
+    50% { box-shadow: 0 0 15px rgba(0, 255, 200, 0.2); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *:before,
+    *:after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     margin: 0;
     width: 100%;
@@ -31,9 +61,9 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${colors.navy};
     color: ${colors.slate};
     line-height: 1.3;
-    font-family: ${fonts.Calibre};
-    font-size: ${fontSizes.xl};
-    ${media.phablet`font-size: ${fontSizes.lg};`}
+    font-family: ${fonts.SFMono};
+    font-size: ${fontSizes.md};
+    ${media.phablet`font-size: ${fontSizes.sm};`}
 
     &.hidden {
       overflow: hidden;
@@ -50,8 +80,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${colors.slate};
-    color: ${colors.lightestSlate};
+    background-color: ${colors.green};
+    color: ${colors.darkNavy};
   }
 
   #root {
@@ -70,6 +100,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     color: ${colors.lightestSlate};
     margin: 0 0 10px 0;
+    font-family: ${fonts.Calibre};
   }
 
   h1 {
@@ -127,7 +158,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:focus,
     &:active {
-      outline-color: ${colors.lightblue};
+      outline-color: ${colors.green};
     }
   }
 
@@ -175,10 +206,11 @@ const GlobalStyle = createGlobalStyle`
         padding-left: 30px;
         margin-bottom: 10px;
         &:before {
-          content: '▹';
+          content: '>';
           position: absolute;
           left: 0;
           color: ${colors.green};
+          font-family: ${fonts.SFMono};
         }
       }
     }

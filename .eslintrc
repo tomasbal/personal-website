@@ -4,6 +4,7 @@
     "es6": true,
     "node": true
   },
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -13,6 +14,10 @@
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["babel-preset-gatsby"]
+    },
     "ecmaFeatures": {
       "jsx": true
     }

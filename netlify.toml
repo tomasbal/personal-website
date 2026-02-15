@@ -3,8 +3,8 @@
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.17.0"
-  NPM_VERSION = "9.6.7"
+  NODE_VERSION = "22.14.0"
+  NPM_VERSION = "10.9.2"
   YARN_VERSION = "1.22.19"
   YARN_FLAGS = "--ignore-engines --network-timeout 100000"
 

@@ -1,23 +1,23 @@
 ---
-title: 'About Me'
+title: 'System Profile'
 avatar: './me.jpg'
 skills:
   - AWS & Azure Cloud
-  - System Architecture
+  - Distributed Systems
   - Cloud Infrastructure
   - Microservices
   - Kubernetes & Docker
-  - Serverless Computing
+  - Serverless Architecture
   - Infrastructure as Code
   - API Design & Integration
   - Security Architecture
-  - DevOps & CI/CD
-  - Performance Optimization
+  - CI/CD Pipelines
+  - Performance Engineering
   - Disaster Recovery
 ---
 
-Hello! I'm Tomislav, a Solutions Architect with a passion for elegant system design and cloud technologies.
+I am a Solutions Architect and Software Engineer who designs and builds complex distributed systems end-to-end. My work sits at the intersection of software architecture, systems engineering, and infrastructure — whether cloud, on-premise, or bare metal.
 
-I find joy in the craft of architecture - taking complex problems and creating clear, resilient systems. Throughout my career, I've had the opportunity to work on fascinating technical challenges across various domains. What excites me most is designing solutions that are not only technically sound but also adaptable and forward-thinking. I'm particularly interested in cloud-native approaches that balance performance, security, and sustainability.
+Over the years, I have architected and hands-on delivered production platforms handling millions of requests, from high-level system design and domain modeling down to writing the services, pipelines, and infrastructure code that bring them to life. I specialize in breaking down complex business problems into clean, scalable architectures — microservices, event-driven systems, API platforms — and then engineering them into production with the same rigor. Every system I build is designed to be resilient, observable, and maintainable at scale.
 
-Some technologies I enjoy working with include:
+Core modules loaded:

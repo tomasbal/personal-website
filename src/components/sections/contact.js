@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import sr from '@utils/sr';
 import { srConfig, email } from '@config';
+import { TerminalWindow } from '@components/effects';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -38,27 +39,49 @@ const StyledTitle = styled.h4`
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
 `;
+const StyledTerminalContent = styled.div`
+  text-align: left;
+  color: ${colors.slate};
+  line-height: 2;
+
+  .status-line {
+    color: ${colors.green};
+    font-size: ${fontSizes.smish};
+  }
+  .prompt {
+    color: ${colors.green};
+  }
+`;
 const StyledEmailLink = styled.a`
   ${mixins.bigButton};
-  margin-top: 50px;
+  margin-top: 30px;
+  display: inline-block;
 `;
 
 const Contact = ({ data }) => {
   const { frontmatter, html } = data[0].node;
-  const { title, buttonText } = frontmatter;
+  const { title } = frontmatter;
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
   return (
     <StyledContainer id="contact" ref={revealContainer}>
-      <StyledHeading>What&apos;s Next?</StyledHeading>
+      <StyledHeading>Establish Connection</StyledHeading>
 
       <StyledTitle>{title}</StyledTitle>
 
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <TerminalWindow title="contact@tomislavbalabanov:~">
+        <StyledTerminalContent>
+          <div className="status-line">&gt; CONNECTION PROTOCOL: READY</div>
+          <div className="status-line">&gt; RESPONSE TIME: &lt; 24 HOURS</div>
+          <div className="status-line">&gt; ENCRYPTION: ENABLED</div>
+          <br />
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </StyledTerminalContent>
+      </TerminalWindow>
 
       <StyledEmailLink href={`mailto:${email}`} target="_blank" rel="nofollow noopener noreferrer">
-        {buttonText}
+        &gt; SEND TRANSMISSION
       </StyledEmailLink>
     </StyledContainer>
   );

@@ -16,7 +16,9 @@ const StyledContainer = styled.header`
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.navy};
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -29,6 +31,7 @@ const StyledContainer = styled.header`
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
+  border-bottom: 1px solid rgba(0, 255, 200, 0.05);
   ${media.desktop`padding: 0 40px;`};
   ${media.tablet`padding: 0 25px;`};
 `;
@@ -144,10 +147,11 @@ const StyledListItem = styled.li`
   font-size: ${fontSizes.smish};
   counter-increment: item 1;
   &:before {
-    content: '0' counter(item) '.';
+    content: '[0' counter(item) ']';
     text-align: right;
     color: ${colors.green};
     font-size: ${fontSizes.xs};
+    margin-right: 5px;
   }
 `;
 const StyledListLink = styled(Link)`
@@ -193,7 +197,6 @@ class Nav extends Component {
     const { isMounted, menuOpen, scrollDirection, lastScrollTop } = this.state;
     const fromTop = window.scrollY;
 
-    // Make sure they scroll more than DELTA
     if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA || menuOpen) {
       return;
     }
@@ -295,11 +298,11 @@ class Nav extends Component {
                 <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                   <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
                     <StyledResumeButton
-                      href="/https://www.linkedin.com/in/tomislavbalabanov/"
+                      href="https://www.linkedin.com/in/tomislavbalabanov/"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                     >
-                      More
+                      LinkedIn
                     </StyledResumeButton>
                   </div>
                 </CSSTransition>

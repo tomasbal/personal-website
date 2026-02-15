@@ -1,8 +1,8 @@
 ---
-title: 'Hi, my name is'
+title: '> system.identify()'
 name: 'Tomislav Balabanov'
-subtitle: 'Solutions Architect & Cloud Enthusiast'
-buttonText: 'Get In Touch'
+subtitle: 'Solutions Architect // Software Architect // Software Engineer'
+buttonText: '> INITIATE CONTACT'
 ---
 
-I'm a Solutions Architect and Software Engineer based in North Macedonia with a passion for cloud technologies and system design. I enjoy creating integrated technology ecosystems that balance technical excellence with practical implementation across various platforms and environments.
+I architect distributed, fault-tolerant systems on AWS and Azure, design event-driven microservice platforms, and build secure cloud infrastructure that scales. Focused on resilient architectures that perform under pressure.

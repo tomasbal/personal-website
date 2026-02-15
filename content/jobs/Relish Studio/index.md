@@ -7,7 +7,7 @@ range: 'July 2019 - Present'
 url: 'https://relish.studio/'
 ---
 
-- Lead the architectural design and implementation of cloud-native applications using microservices architecture on AWS.
-- Designed scalable, high-performance solutions that integrate with marketing and analytics platforms to deliver superior data insights.
-- Architected secure, resilient systems that handle mission-critical business operations while ensuring data integrity and compliance.
-- Mentored development teams on cloud best practices, infrastructure as code, and modern development methodologies.
+- Lead architectural design of cloud-native microservice platforms on AWS, establishing service mesh patterns, API gateway configurations, and container orchestration strategies.
+- Engineered high-throughput data pipeline integrations with marketing and analytics platforms, enabling real-time business intelligence across distributed data sources.
+- Architected resilient, multi-AZ systems with automated scaling, circuit breaker patterns, and comprehensive observability for mission-critical operations.
+- Established infrastructure-as-code practices with Terraform, CI/CD pipelines, and engineering standards adopted across development teams.

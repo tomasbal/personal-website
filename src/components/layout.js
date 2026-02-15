@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { ParticleBackground, ScanlineOverlay } from '@components/effects';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -56,7 +57,7 @@ const Layout = ({ children, location }) => {
       return;
     }
     if (location.hash) {
-      const id = location.hash.substring(1); // location.hash without the '#'
+      const id = location.hash.substring(1);
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
@@ -92,6 +93,8 @@ const Layout = ({ children, location }) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
+              <ParticleBackground />
+              <ScanlineOverlay />
               <Nav isHome={isHome} />
               <Social isHome={isHome} />
               <Email isHome={isHome} />

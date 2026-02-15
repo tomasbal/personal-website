@@ -1,5 +1,5 @@
 ---
-title: 'Certifications & Learning Journey'
+title: 'Achievements Unlocked'
 certificates:
   - name: 'AWS Solutions Architect Professional'
     issuer: 'Amazon Web Services'
@@ -66,6 +66,16 @@ certificates:
     date: 'June 2023'
     icon: '/icons/certificates/understanding-owasp-top-10.png'
     url: 'https://www.credly.com/badges/ae11247a-3a33-4874-a650-6826b9471471'
+  - name: 'Computer and Hacking Forensics'
+    issuer: 'EC-Council'
+    date: '2019'
+    icon: '/icons/certificates/computer-hacking-forensics.png'
+    url: ''
+  - name: 'Linux Foundation Certified Systems Engineer'
+    issuer: 'Linux Foundation'
+    date: '2020'
+    icon: '/icons/certificates/linux-foundation-cse.png'
+    url: ''
 ---
 
-I'm a firm believer in continuous learning and professional development. These certifications represent some of my formal education in cloud technologies and security, though I find the most valuable learning comes from hands-on experience with real-world challenges. I enjoy pushing the boundaries of my knowledge and staying current with the rapidly evolving technology landscape.
+Verified credentials across cloud architecture, security, and infrastructure domains. Each certification represents validated expertise in designing and operating production-grade systems.

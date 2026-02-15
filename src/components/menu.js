@@ -25,6 +25,7 @@ const Sidebar = styled.aside`
   ${mixins.flexCenter};
   flex-direction: column;
   background-color: ${colors.lightNavy};
+  backdrop-filter: blur(10px);
   padding: 50px;
   width: 50vw;
   height: 100%;
@@ -33,6 +34,7 @@ const Sidebar = styled.aside`
   margin-left: auto;
   font-family: ${fonts.SFMono};
   box-shadow: -10px 0px 30px -15px ${colors.shadowNavy};
+  border-left: 1px solid rgba(0, 255, 200, 0.08);
   ${media.thone`padding: 25px;`};
   ${media.phablet`width: 75vw;`};
   ${media.tiny`padding: 10px;`};
@@ -62,7 +64,7 @@ const NavListItem = styled.li`
   ${media.tiny`font-size: ${fontSizes.smish};`};
   &:before {
     display: block;
-    content: '0' counter(item) '.';
+    content: '[0' counter(item) ']';
     color: ${colors.green};
     font-size: ${fontSizes.sm};
     margin-bottom: 5px;
@@ -96,7 +98,8 @@ const Menu = ({ menuOpen, toggleMenu }) => {
       menuOpen={menuOpen}
       onClick={handleMenuClick}
       aria-hidden={!menuOpen}
-      tabIndex={menuOpen ? 1 : -1}>
+      tabIndex={menuOpen ? 1 : -1}
+    >
       <Sidebar>
         <NavLinks>
           <NavList>
@@ -107,8 +110,12 @@ const Menu = ({ menuOpen, toggleMenu }) => {
                 </NavListItem>
               ))}
           </NavList>
-          <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
-            Resume
+          <ResumeLink
+            href="https://www.linkedin.com/in/tomislavbalabanov/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            LinkedIn
           </ResumeLink>
         </NavLinks>
       </Sidebar>

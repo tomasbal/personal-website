@@ -19,6 +19,7 @@ const Button = styled.button`
   &:focus,
   &:active {
     background-color: ${colors.transGreen};
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.2);
     outline: none;
   }
   &:after {

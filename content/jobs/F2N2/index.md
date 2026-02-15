@@ -7,6 +7,6 @@ range: 'May 2018 - Present'
 url: 'https://f2n2.mk/'
 ---
 
-- Architected and implemented a comprehensive cloud-based platform for identifying and analyzing misinformation using AWS services.
-- Designed and developed data analysis systems to track, categorize, and counter disinformation campaigns using machine learning and natural language processing.
-- Implemented secure data storage solutions and APIs that integrate with multiple information sources while maintaining high performance and availability.
+- Architected a cloud-native ML pipeline on AWS for real-time identification and analysis of disinformation campaigns, processing large-scale data streams with high throughput.
+- Designed event-driven data ingestion architecture integrating multiple information sources with NLP-based classification models, achieving high accuracy in content categorization.
+- Engineered secure data storage layer with encrypted-at-rest and in-transit data handling, backed by high-availability API infrastructure with automated failover.

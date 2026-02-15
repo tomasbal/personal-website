@@ -7,7 +7,7 @@ range: 'Jan 2018 - Present'
 url: '/'
 ---
 
-- Designed and implemented comprehensive security architecture for critical infrastructure using AWS security services and best practices.
-- Established advanced network security protocols, firewalls, and intrusion detection systems to protect sensitive organizational data.
-- Developed and maintained continuous security monitoring solutions with automated incident response capabilities.
-- Conducted regular security assessments and implemented security hardening measures across cloud and on-premises systems.
+- Designed defense-in-depth security architecture for critical infrastructure leveraging AWS GuardDuty, Security Hub, WAF, and IAM policy frameworks.
+- Engineered multi-layer network security with VPC segmentation, NACLs, security groups, and IDS/IPS systems protecting sensitive data across hybrid environments.
+- Built automated security monitoring and incident response pipelines using CloudWatch, Lambda, and SNS for real-time threat detection and remediation.
+- Executed regular penetration testing, vulnerability assessments, and CIS benchmark hardening across cloud and on-premises infrastructure.
